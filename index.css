@@ -21,7 +21,29 @@ body {
     display: flex;
     justify-content: space-around;
     padding-top: 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
+
+
+.navbar.scrolled {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 0.6%;
+    z-index: 5555;
+}
+
+
+/* .navbar:hover{
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+} */
 
 .navbar ul {
     list-style: none;
@@ -590,6 +612,15 @@ footer .content h1 {
 
 
 @media screen and (max-width:1991px) {
+
+    .navbar {
+        margin-top: 0;
+        padding-top: 1.5%;
+        width: 100%;
+        margin-left: 0;
+        top: 0;
+        left: 0;
+    }
     .home .row {
         justify-content: space-between;
 
@@ -598,8 +629,8 @@ footer .content h1 {
 
     .navbar {
         justify-content: space-between;
-        margin-right: 2%;
-        margin-left: 2%;
+        padding-right: 2%;
+        padding-left: 2%;
     }
 
     .about .part2 {
@@ -892,6 +923,48 @@ footer .content h1 {
 
 
 @media screen and (max-width:768px) {
+
+    .navbar {
+        margin-top: 0;
+        padding-top: 1.5%;
+        width: 100%;
+        margin-left: 0;
+        top: 0;
+        left: 0;
+    }
+    .w3-sidebar {
+        position: absolute; /* Ensure the sidebar is positioned to allow z-index to work */
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        z-index: 999999999999999999999; /* Ensure the sidebar is above the navbar */
+    }
+    
+    .navbar.scrolled {
+        position: fixed; /* Ensure the navbar is fixed to see the z-index effect */
+        top: 0;
+        width: 100%;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        padding: 0.6%;
+        z-index: 0; /* Ensure the navbar is behind the sidebar */
+    }
+    
+    
+    .home,.reviews , .shope{
+        z-index: -1;
+    }
+    
+    
+    .shop{
+        z-index: -99999999999999999999999;
+        position: relative;
+    }
     .shop .info1 .row1 {
 
         grid-template-columns: repeat(1, 1fr);
@@ -913,6 +986,53 @@ footer .content h1 {
 }
 
 @media screen and (max-width:550px) {
+
+
+    
+.navbar {
+    margin-top: 0;
+    padding-top: 1.5%;
+    width: 100%;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+}
+.w3-sidebar {
+    position: absolute; /* Ensure the sidebar is positioned to allow z-index to work */
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 999999999999999999999; /* Ensure the sidebar is above the navbar */
+}
+
+.navbar.scrolled {
+    position: fixed; /* Ensure the navbar is fixed to see the z-index effect */
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 0.6%;
+    z-index: 0; /* Ensure the navbar is behind the sidebar */
+}
+
+
+.home,.reviews , .shope{
+    z-index: -1;
+}
+
+
+.shop{
+    z-index: -99999999999999999999999;
+    position: relative;
+}
+
+
+
     .part2 .content span {
         font-size: 25px;
     }
@@ -930,6 +1050,7 @@ footer .content h1 {
         padding-top: 5%;
         height: 100%;
         margin-bottom: 10%;
+        margin-top: 20%;
     }
 
     .home .part3 {
@@ -997,16 +1118,22 @@ footer .content h1 {
     }
 
     .shop .info1 .row1 {
-
         grid-template-columns: repeat(1, 1fr);
-        margin-left: 0.5%;
-        margin-right: 0.5%;
+     
+    }
+
+    .shop .info1 .row1 .card{
+        width: 100%;
 
     }
 
     .reviews{
-        margin-top: 30%;
+        margin-top: 40%;
         margin-bottom: 20%;
+    }
+
+    .reviews .card{
+        width: 100%;
     }
 
     .footer .row {
@@ -1026,7 +1153,6 @@ footer .content h1 {
     
 
 }
-
 
 
 
