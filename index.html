@@ -9,6 +9,7 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
@@ -42,10 +43,10 @@
         </div>
 
         <div style="padding-top: 10%; font-size: 20px;">
-            <a href="#" class="w3-bar-item w3-button">About</a>
-            <a href="#" class="w3-bar-item w3-button">Membership</a>
-            <a href="#" class="w3-bar-item w3-button">Event</a>
-            <a href="#" class="w3-bar-item w3-button">Contact</a>
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+            <a href="#products" class="w3-bar-item w3-button">Products</a>
+            <a href="#reviews" class="w3-bar-item w3-button">Reviews</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
 
 
         </div>
@@ -62,18 +63,18 @@
     <!-- Sidebar -->
 
 
-    <div class="navbar">
+    <div class="navbar" id="navbar">
 
-        <div class="logo">
+        <div class="logo" onclick="window.location.href='#home'">
             <img src="images/logo.png" alt="">
 
         </div>
 
         <ul>
-            <li>About</li>
-            <li>Membership</li>
-            <li>Event</li>
-            <li>Contact</li>
+            <li onclick="window.location.href='#about'">About</li>
+            <li onclick="window.location.href='#products'">Products</li>
+            <li onclick="window.location.href='#reviews'">Reviews</li>
+            <li onclick="window.location.href='#contact'">Contact</li>
 
         </ul>
         <div class="but">
@@ -109,7 +110,7 @@
     <!-- Home -->
 
 
-    <div class="home">
+    <div class="home" id="home">
         <div class="row">
 
 
@@ -289,7 +290,7 @@
 
     <!-- shope -->
 
-    <div class="shop">
+    <div class="shop" id="products">
 
         <div class="title">
             <h3>Our Shop</h3>
@@ -404,7 +405,7 @@
 
     <!-- review -->
 
-    <div class="shop reviews">
+    <div class="shop reviews" id="reviews">
 
         <div class="title">
             <h3>Our Customers</h3>
@@ -530,7 +531,7 @@
 
     <!-- Footer  -->
 
-    <div class="footer">
+    <div class="footer" id="contact">
         <div class="row">
             <div class="left">
                 <img src="images/logo.png" alt="">
@@ -583,18 +584,7 @@
 
 
 
-
-
-    <script>
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-        }
-
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-        }
-    </script>
-
+<script src="index.js"></script>
 </body>
 
 </html>
